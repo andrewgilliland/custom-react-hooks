@@ -3,6 +3,7 @@ import { Card, CardGrid, Container, Header } from "./Elements";
 import "./App.css";
 import Menu from "./Menu";
 import Toggle from "./components/Toggle";
+import Increment from './components/Increment'
 import blue from "./blue.png";
 import purp from "./purp.png";
 import black from "./black.png";
@@ -18,6 +19,7 @@ function App() {
       <Container>
         <h2>Super Cool</h2>
         <Toggle />
+        <Increment />
         <CardGrid>
           <Card style={{ background: "var(--purp)" }}>
             <h3>Some card</h3>
