@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import { useIncrement } from "../hooks/useIncrement";
 
 const Increment = () => {
-  const [value, setValue] = useState(0);
+  const [value, { increment, decrement }] = useIncrement();
 
   return (
     <div>
-      <button onClick={() => setValue((prevState) => prevState - 1)}>-</button>
+      <button onClick={decrement}>-</button>
       {value}
-      <button onClick={() => setValue((prevState) => prevState + 1)}>+</button>
+      <button onClick={increment}>+</button>
     </div>
   );
 };
