@@ -1,0 +1,15 @@
+import React from "react";
+import { useToggle } from "../hooks/useToggle";
+
+export const Toggle = () => {
+  const [isToggled, setToggle, toggle] = useToggle(false);
+
+  return (
+    <div>
+      <button onClick={toggle}>Toggle</button>
+      {isToggled && <p>To be toggled</p>}
+    </div>
+  );
+};
+
+export default Toggle;
