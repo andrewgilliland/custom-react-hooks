@@ -1,10 +1,18 @@
 import React from "react";
 import { useAppState } from "../state";
+import { useScrollFreeze } from "../hooks";
 
-export const Nav = () => {
-  const { isMenuOpen, toggleMenu } = useAppState();
+const NavWrapper = () => {
+  const { isMenuOpen } = useAppState();
 
   if (!isMenuOpen) return null;
+  return <Nav />;
+};
+
+const Nav = () => {
+  const { toggleMenu } = useAppState();
+  useScrollFreeze();
+
   return (
     <nav
       style={{
@@ -23,4 +31,4 @@ export const Nav = () => {
   );
 };
 
-export default Nav;
+export default NavWrapper;
