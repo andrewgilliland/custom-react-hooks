@@ -1,15 +1,22 @@
 import { useState } from "react";
 
-export const useIncrement = (initial = 0) => {
+export const useIncrement = ({
+  maxValue = 10000,
+  minValue = -10000,
+  initial = 0,
+  step = 1
+}) => {
   const [value, setValue] = useState(initial);
 
   const increment = () => {
-    setValue((prevState) => prevState + 1);
+    setValue((prevState) => (prevState + step >= maxValue ? maxValue : prevState + step));
   };
 
   const decrement = () => {
-    setValue((prevState) => prevState - 1);
+    setValue((prevState) => (prevState - step <= minValue ? minValue : prevState - step));
   };
 
-  return [value, { increment, decrement }];
+  const reset = () => setValue(initial);
+
+  return [value, { increment, decrement, reset }];
 };
