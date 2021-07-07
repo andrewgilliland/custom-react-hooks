@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { useHover } from "../hooks/useHover";
+import { useHover } from "../hooks";
 import { Card } from "../Elements";
 import black from "../black.png";
 
