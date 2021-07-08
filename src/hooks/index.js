@@ -1,6 +1,7 @@
 export * from "./useCookies";
 export * from "./useHover";
 export * from "./useIncrement";
+export * from "./useLocalStorage";
 export * from "./useMeasure";
 export * from "./useMount";
 export * from "./useScript";

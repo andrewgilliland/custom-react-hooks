@@ -8,6 +8,7 @@ import Mount from "./components/Mount";
 import Hover from "./components/Hover";
 import Cookie from "./components/Cookie";
 import Script from "./components/Script";
+import Local from "./components/Local";
 import { PageWrapper } from "./state";
 import Nav from "./components/Nav";
 import blue from "./blue.png";
@@ -31,6 +32,7 @@ function App() {
         <Cookie />
         <Hover />
         <Script />
+        <Local />
         <CardGrid>
           <Card style={{ background: "var(--purp)" }}>
             <h3>Some card</h3>
