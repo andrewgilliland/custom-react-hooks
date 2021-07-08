@@ -9,6 +9,7 @@ import Hover from "./components/Hover";
 import Cookie from "./components/Cookie";
 import Script from "./components/Script";
 import Local from "./components/Local";
+import Theme from "./components/Theme";
 import { PageWrapper } from "./state";
 import Nav from "./components/Nav";
 import blue from "./blue.png";
@@ -26,12 +27,13 @@ function App() {
       <Nav />
       <Container>
         <h2>Super Cool</h2>
+        <Theme />
+        <Script />
         <Toggle />
         <Increment />
         <Mount />
         <Cookie />
         <Hover />
-        <Script />
         <Local />
         <CardGrid>
           <Card style={{ background: "var(--purp)" }}>
