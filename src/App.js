@@ -7,6 +7,7 @@ import Increment from "./components/Increment";
 import Mount from "./components/Mount";
 import Hover from "./components/Hover";
 import Cookie from "./components/Cookie";
+import Script from "./components/Script";
 import { PageWrapper } from "./state";
 import Nav from "./components/Nav";
 import blue from "./blue.png";
@@ -29,6 +30,7 @@ function App() {
         <Mount />
         <Cookie />
         <Hover />
+        <Script />
         <CardGrid>
           <Card style={{ background: "var(--purp)" }}>
             <h3>Some card</h3>
