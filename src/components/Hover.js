@@ -1,18 +1,22 @@
 import React from "react";
-import { useHover, useWindowWidth } from "../hooks";
+import { useHover, useWindowWidth, useMeasure } from "../hooks";
 import { Card } from "../Elements";
 import black from "../black.png";
 
 const Hover = () => {
   const [isHovered, bind] = useHover(false);
   const width = useWindowWidth();
-  console.log("isHovered", isHovered);
-  console.log("width", width);
+  const [{ ref }, bounds] = useMeasure();
+
+  // console.log("isHovered", isHovered);
+  // console.log("width", width);
+  console.log("bounds", bounds);
 
   if (width < 400) return null;
 
   return (
     <Card
+      ref={ref}
       {...bind}
       style={{ background: isHovered ? "var(--purp)" : "var(--black)" }}
     >
